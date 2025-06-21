@@ -31,13 +31,13 @@ function all(promises) {
   });
 }
 
-// const promise1 = Promise.resolve("A");
-// const promise2 = Promise.reject("Error in B");
-// const promise3 = Promise.resolve("C");
-
 const promise1 = Promise.resolve("A");
-const promise2 = Promise.resolve("B");
+const promise2 = Promise.reject("Error in B");
 const promise3 = Promise.resolve("C");
+
+// const promise1 = Promise.resolve("A");
+// const promise2 = Promise.resolve("B");
+// const promise3 = Promise.resolve("C");
 
 all([promise1, promise2, promise3])
   .then((val) => {
